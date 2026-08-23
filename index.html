@@ -1,14 +1,14 @@
-<!-- CM001 - HTML Start -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- CM002 - Meta Data -->
+
+<!-- CM001 - Meta Data -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishna Children's and Dental Hospital | Allagadda</title>
 <meta name="description" content="A trusted, caring place for children's healthcare and dental care in Allagadda.">
 
-<!-- CM003 - Favicon and PWA -->
+<!-- CM002 - Favicon and PWA -->
 <link rel="icon" href="https://sri-veda-org.github.io/KH/kh-logo-no-bg.png" type="image/png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -16,21 +16,20 @@
 <link rel="apple-touch-icon" href="https://sri-veda-org.github.io/KH/kh-logo-no-bg.png">
 <link rel="manifest" href="manifest.json">
 
-<!-- CM004 - Fonts -->
+<!-- CM003 - Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- CM005 - Tailwind CSS Config -->
+<!-- CM004 - Tailwind CSS Config -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], telugu: ['"Noto Sans Telugu"', 'sans-serif'], }, colors: { primary: '#2078b6', primaryLight: '#e0f2fe', secondary: '#2078b6', secondaryLight: '#e0f2fe', softBg: '#f8fafc', softCream: '#fdfbf7', } } } }
 </script>
 
-<!-- CM006 - Custom CSS -->
+<!-- CM005 - Custom CSS General Styles -->
 <style>
-/* CM007 - General Styles */
 html { scroll-behavior: smooth; }
 body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
@@ -38,11 +37,11 @@ body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
 
-/* CM008 - Input Styles */
+/* CM006 - Input Styles */
 .hd-input { border: 1px solid #e2e8f0; background-color: #f8fafc; transition: all 0.2s ease; box-shadow: inset 0 1px 2px rgba(0,0,0,0.02); }
 .hd-input:focus { background-color: #ffffff; border-color: #2078b6; box-shadow: 0 0 0 3px rgba(32, 120, 182, 0.15); outline: none; }
 
-/* CM009 - Lightbox Styles */
+/* CM007 - Lightbox Styles */
 #lightbox { display: none; }
 #lightbox.active { display: flex; }
 .hide-scroll::-webkit-scrollbar { display: none; }
@@ -50,10 +49,39 @@ body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 </style>
 </head>
 
-<!-- CM010 - Body Start -->
-<body class="text-gray-800 font-sans antialiased">
+<!-- CM008 - All Links Directory -->
+<!--
+ఈ క్రింది లింకులను మీరు కరెక్ట్ గా మార్చుకోవచ్చు:
+1. Top Bar Phone Link: href="tel:9908899131"
+2. Top Bar Website Link: href="https://www.krishnahospital.com"
+3. Top Bar YouTube Link: href="#"
+4. Top Bar Instagram Link: href="#"
+5. Top Bar Facebook Link: href="#"
+6. Top Bar WhatsApp Link: href="#"
+7. Main Menu Home: href="#home"
+8. Main Menu Doctors: href="#doctors"
+9. Main Menu Services: href="#services"
+10. Main Menu Document: href="https://kh-alg.github.io/WEB-V1.0/healthrecord/"
+11. Main Menu Book OP: href="#book-op"
+12. Hero Section Book Hospital: href="#book-op"
+13. Hero Section Call: href="tel:9908899131"
+14. Documents View All Link: href="#"
+15. Doctors Section Book Appt 1: href="#book-op"
+16. Doctors Section Book Appt 2: href="#book-op"
+17. Footer Home: href="#home"
+18. Footer Doctors: href="#doctors"
+19. Footer Services: href="#services"
+20. Footer Document: href="https://kh-alg.github.io/WEB-V1.0/healthrecord/"
+21. Footer Mobile Bar Call: href="tel:9908899131"
+22. Footer Mobile Bar Book: href="#book-op"
+23. Footer Mobile Bar Contact: href="#contact"
+-->
 
-<!-- CM011 - Header Top Bar -->
+<!-- CM009 - Body Start and Toast Container -->
+<body class="text-gray-800 font-sans antialiased">
+<div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+<!-- CM010 - Header Top Bar -->
 <div class="bg-primaryLight/70 border-b border-blue-100 text-gray-700 py-1.5 px-4 text-xs font-medium">
 <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center">
 <div class="flex items-center space-x-4 mb-1 sm:mb-0">
@@ -69,7 +97,7 @@ body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 </div>
 </div>
 
-<!-- CM012 - Main Header -->
+<!-- CM011 - Main Header -->
 <header class="w-full z-50 bg-[#f0f9ff] shadow-sm border-b border-blue-50 transition-all duration-300" id="header">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-16 md:h-20">
@@ -84,7 +112,7 @@ body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 <a href="#home" class="text-lg text-gray-600 hover:text-primary transition-colors" title="Home"><i class="fa-solid fa-house"></i></a>
 <a href="#doctors" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Doctors</a>
 <a href="#services" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Services</a>
-<a href="#videos" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Videos</a>
+<a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Document</a>
 <a href="#book-op" class="bg-primary text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary transition-colors shadow-sm flex items-center">
 <i class="fa-solid fa-calendar-check mr-2"></i> Book OP
 </a>
@@ -99,15 +127,17 @@ Book OP
 </div>
 </div>
 </div>
+</header>
+
+<!-- CM012 - Mobile Menu -->
 <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full z-50">
 <div class="px-4 pt-2 pb-4 space-y-1">
 <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md"><i class="fa-solid fa-house mr-2"></i> Home</a>
 <a href="#doctors" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Doctors</a>
 <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Services</a>
-<a href="#videos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Videos</a>
+<a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Document</a>
 </div>
 </div>
-</header>
 
 <!-- CM013 - Hero Section -->
 <section id="home" class="relative bg-softCream overflow-hidden py-10 lg:py-14">
@@ -193,129 +223,45 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 </div>
 </div>
 
-<!-- CM015 - Videos Section -->
-<section id="videos" class="section-padding bg-softBg">
+<!-- CM015 - Document Section -->
+<section id="document" class="section-padding bg-softBg">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row justify-between items-end mb-6">
 <div>
-<span class="inline-block py-1 px-2.5 rounded text-red-600 bg-red-50 text-[10px] font-bold uppercase tracking-wider mb-2 border border-red-100"><i class="fa-brands fa-youtube mr-1"></i> Health Education</span>
-<h2 class="text-2xl font-bold text-gray-900">Children's Health Awareness</h2>
-<p class="text-xs text-gray-600 mt-1 max-w-xl">Free advice and health awareness for the society regarding the current generation and seasonal care.</p>
+<span class="inline-block py-1 px-2.5 rounded text-blue-600 bg-blue-50 text-[10px] font-bold uppercase tracking-wider mb-2 border border-blue-100"><i class="fa-solid fa-file-lines mr-1"></i> Hospital Records</span>
+<h2 class="text-2xl font-bold text-gray-900">Important Documents</h2>
+<p class="text-xs text-gray-600 mt-1 max-w-xl">Find important health guidelines, patient forms, and hospital information documents here.</p>
 </div>
-<a href="#" class="hidden md:inline-flex text-xs font-semibold text-red-600 hover:text-red-700 transition-colors mt-3">View Channel &rarr;</a>
+<a href="#" class="hidden md:inline-flex text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors mt-3">View All Documents &rarr;</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/kKD35xn1Be0?si=zU7S5CBSVh09JaRl', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/kKD35xn1Be0/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<i class="fa-solid fa-file-pdf text-xl"></i>
 </div>
+<h3 class="font-bold text-gray-900 text-xs mb-1">Patient Form</h3>
+<p class="text-[9px] text-gray-500">Download registration form</p>
 </div>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<i class="fa-solid fa-file-medical text-xl"></i>
 </div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 1</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
+<h3 class="font-bold text-gray-900 text-xs mb-1">Health Guidelines</h3>
+<p class="text-[9px] text-gray-500">Seasonal care tips</p>
 </div>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<i class="fa-solid fa-file-prescription text-xl"></i>
 </div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/5IokGrmnXd8?si=BHNFGinAo74dEnD1', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/5IokGrmnXd8/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
+<h3 class="font-bold text-gray-900 text-xs mb-1">Dental Care</h3>
+<p class="text-[9px] text-gray-500">Oral hygiene instructions</p>
 </div>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<i class="fa-solid fa-folder-open text-xl"></i>
 </div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 2</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/1d8UU8mxCaw?si=rM00E5jHSH3FwhXv', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/1d8UU8mxCaw/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 3</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/Mha3B772Q44?si=difUWz5_zvNp0rrF', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/Mha3B772Q44/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 4</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/e6KcNAfSWEE?si=0nED7gK_id5OwwTs', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/e6KcNAfSWEE/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 5</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/IBnAzlQGPwA?si=Q5_ZRmBtbIHnUJqa', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/IBnAzlQGPwA/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 6</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/-UM7XUe2a9U?si=xbcPfx-3nwyqVPU8', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/-UM7XUe2a9U/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 7</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group cursor-pointer" onclick="window.open('https://youtu.be/R6Riw7qlXpI?si=OiAwQXW-E2WS3nu3', '_blank')">
-<div class="relative h-24 sm:h-28 bg-gray-200">
-<img src="https://img.youtube.com/vi/R6Riw7qlXpI/hqdefault.jpg" alt="Video" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/20 flex justify-center items-center group-hover:bg-black/30 transition-all">
-<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform">
-<i class="fa-solid fa-play text-xs ml-0.5"></i>
-</div>
-</div>
-</div>
-<div class="p-2 sm:p-3">
-<h3 class="font-bold text-gray-900 text-xs line-clamp-2 leading-tight mb-1">Health Tips Video 8</h3>
-<p class="text-[9px] text-gray-500 line-clamp-1">Dr. Krishnamohan</p>
-</div>
+<h3 class="font-bold text-gray-900 text-xs mb-1">Other Records</h3>
+<p class="text-[9px] text-gray-500">Hospital policies & info</p>
 </div>
 </div>
 </div>
@@ -401,7 +347,7 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 <span class="text-blue-100 text-[10px] uppercase font-semibold tracking-wider">Fast & Easy</span>
 </div>
 <div class="p-5 md:p-6">
-<form action="#" method="POST" onsubmit="event.preventDefault(); alert('OP Appointment successfully booked!');">
+<form id="op-form" action="#" method="POST">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 <div>
 <label for="doctor" class="block text-xs font-bold text-gray-700 mb-1">Select Doctor <span class="text-red-500">*</span></label>
@@ -572,7 +518,7 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- CM022 - Lightbox -->
+<!-- CM022 - Lightbox Element -->
 <div id="lightbox" class="fixed inset-0 z-[60] bg-black bg-opacity-90 items-center justify-center p-4">
 <button onclick="closeLightbox()" class="absolute top-4 right-6 text-white text-4xl hover:text-gray-300">&times;</button>
 <img id="lightbox-img" src="" alt="Full size" class="max-w-full max-h-[90vh] object-contain rounded">
@@ -637,7 +583,7 @@ Opp. RTC Bus Depot, Kadapa Road, Allagadda, Nandyala District, AP - 518543.
 <p class="text-sm text-gray-600">Reach out for inquiries or assistance. Call directly at <a href="tel:9908899131" class="font-bold text-primary">9908899131</a></p>
 </div>
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-<form action="#" method="POST" class="bg-softBg p-5 rounded-xl border border-gray-100 shadow-sm" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+<form id="contact-form" action="#" method="POST" class="bg-softBg p-5 rounded-xl border border-gray-100 shadow-sm">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 <div>
 <input type="text" id="name" name="name" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Your Full Name" required>
@@ -676,7 +622,7 @@ Send Message
 <li><a href="#home" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Home</a></li>
 <li><a href="#doctors" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Doctors</a></li>
 <li><a href="#services" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Services</a></li>
-<li><a href="#videos" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Health Videos</a></li>
+<li><a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Document</a></li>
 </ul>
 </div>
 <div>
@@ -717,16 +663,27 @@ Send Message
 </a>
 </div>
 
-<!-- CM027 - Scripts -->
 <script>
-/* CM028 - Mobile Menu Logic */
+/* CM027 - Mobile Menu Logic */
 const btn = document.getElementById('mobile-menu-btn'); const menu = document.getElementById('mobile-menu'); const icon = btn.querySelector('i'); btn.addEventListener('click', () => { menu.classList.toggle('hidden'); if (menu.classList.contains('hidden')) { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); } else { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); } }); const mobileLinks = menu.querySelectorAll('a'); mobileLinks.forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }); });
 
-/* CM029 - Lightbox Logic */
+/* CM028 - Lightbox Logic */
 const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img'); function openLightbox(imgSrc) { lightboxImg.src = imgSrc; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; } function closeLightbox() { lightbox.classList.remove('active'); document.body.style.overflow = 'auto'; } lightbox.addEventListener('click', (e) => { if (e.target === lightbox) { closeLightbox(); } }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) { closeLightbox(); } });
 
-/* CM030 - PWA Logic */
+/* CM029 - PWA Logic */
 let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
+
+/* CM030 - Toast Notification Logic */
+function showToast(msg) { const t = document.createElement('div'); t.className = 'bg-gray-800 text-white px-4 py-3 rounded shadow-lg text-sm transition-opacity duration-300 pointer-events-auto border-l-4 border-primary'; t.textContent = msg; document.getElementById('toast-container').appendChild(t); setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 4000); }
+
+/* CM031 - OP Registration Form Logic */
+document.getElementById('op-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not available today so it will be working soon.'); });
+
+/* CM032 - Contact Form Logic */
+document.getElementById('contact-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not working.'); });
+
+/* CM033 - Contact Form Input Logic */
+document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(input => { input.addEventListener('focus', () => { showToast('This service is not working.'); }); });
 </script>
 </body>
 </html>
