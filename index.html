@@ -25,80 +25,100 @@
 <!-- CM004 - Tailwind CSS Config -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], telugu: ['"Noto Sans Telugu"', 'sans-serif'], }, colors: { primary: '#2078b6', primaryLight: '#e0f2fe', secondary: '#2078b6', secondaryLight: '#e0f2fe', softBg: '#f8fafc', softCream: '#fdfbf7', } } } }
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],telugu:['"Noto Sans Telugu"','sans-serif']},colors:{primary:'#2078b6',primaryLight:'#e0f2fe',secondary:'#2078b6',secondaryLight:'#e0f2fe',softBg:'#f8fafc',softCream:'#fdfbf7'}}}}
 </script>
 
-<!-- CM005 - Custom CSS General Styles -->
 <style>
+
+/* CM005 - Body Styles */
 html { scroll-behavior: smooth; }
 body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
+
+/* CM006 - General & Helper Styles CSS */
 .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 .section-padding { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
 
-/* CM006 - Input Styles */
-.hd-input { border: 1px solid #e2e8f0; background-color: #f8fafc; transition: all 0.2s ease; box-shadow: inset 0 1px 2px rgba(0,0,0,0.02); }
-.hd-input:focus { background-color: #ffffff; border-color: #2078b6; box-shadow: 0 0 0 3px rgba(32, 120, 182, 0.15); outline: none; }
+/* CM007 - Top Bar CSS */
+.top-bar-bg { background-color: rgba(224, 242, 254, 0.7); }
 
-/* CM007 - Lightbox Styles */
+/* CM008 - Header CSS */
+.header-bg { background-color: #f0f9ff; }
+
+/* CM009 - Mobile Menu CSS */
+.mobile-menu-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+/* CM010 - Hero Section CSS */
+.hero-bg { background-color: #fdfbf7; }
+
+/* CM011 - Quick Info CSS */
+.info-border { border-color: #f3f4f6; }
+
+/* CM012 - Document Section CSS */
+.doc-bg { background-color: #f8fafc; }
+
+/* CM013 - About Section CSS */
+.about-border { border-color: #f3f4f6; }
+
+/* CM014 - Doctors Section CSS */
+.doc-placeholder { background-color: #ffffff; padding: 2rem; }
+
+/* CM015 - Book OP CSS */
+.op-input { border: 1px solid #e2e8f0; background-color: #f8fafc; transition: all 0.2s ease; box-shadow: inset 0 1px 2px rgba(0,0,0,0.02); }
+.op-input:focus { background-color: #ffffff; border-color: #2078b6; box-shadow: 0 0 0 3px rgba(32, 120, 182, 0.15); outline: none; }
+
+/* CM016 - Services CSS */
+.service-card { border: 1px solid #f3f4f6; }
+
+/* CM017 - Why Choose Us CSS */
+.choose-bg { background-color: #fdfbf7; }
+
+/* CM018 - Gallery CSS */
+.gallery-img { transition: transform 0.3s duration-300; }
+
+/* CM019 - Lightbox CSS */
 #lightbox { display: none; }
 #lightbox.active { display: flex; }
 .hide-scroll::-webkit-scrollbar { display: none; }
 .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* CM020 - Timings & Location CSS */
+.time-table { width: 100%; border-collapse: collapse; }
+
+/* CM021 - Contact CSS */
+.contact-bg { background-color: #ffffff; }
+
+/* CM022 - Footer CSS */
+.footer-bg { background-color: #fdfbf7; }
+
+/* CM023 - Mobile Bottom Bar CSS */
+.bottom-bar-shadow { box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
+
 </style>
 </head>
 
-<!-- CM008 - All Links Directory -->
-<!--
-ఈ క్రింది లింకులను మీరు కరెక్ట్ గా మార్చుకోవచ్చు:
-1. Top Bar Phone Link: href="tel:9908899131"
-2. Top Bar Website Link: href="https://www.krishnahospital.com"
-3. Top Bar YouTube Link: href="#"
-4. Top Bar Instagram Link: href="#"
-5. Top Bar Facebook Link: href="#"
-6. Top Bar WhatsApp Link: href="#"
-7. Main Menu Home: href="#home"
-8. Main Menu Doctors: href="#doctors"
-9. Main Menu Services: href="#services"
-10. Main Menu Document: href="https://kh-alg.github.io/WEB-V1.0/healthrecord/"
-11. Main Menu Book OP: href="#book-op"
-12. Hero Section Book Hospital: href="#book-op"
-13. Hero Section Call: href="tel:9908899131"
-14. Documents View All Link: href="#"
-15. Doctors Section Book Appt 1: href="#book-op"
-16. Doctors Section Book Appt 2: href="#book-op"
-17. Footer Home: href="#home"
-18. Footer Doctors: href="#doctors"
-19. Footer Services: href="#services"
-20. Footer Document: href="https://kh-alg.github.io/WEB-V1.0/healthrecord/"
-21. Footer Mobile Bar Call: href="tel:9908899131"
-22. Footer Mobile Bar Book: href="#book-op"
-23. Footer Mobile Bar Contact: href="#contact"
--->
-
-<!-- CM009 - Body Start and Toast Container -->
 <body class="text-gray-800 font-sans antialiased">
 <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
 
-<!-- CM010 - Header Top Bar -->
-<div class="bg-primaryLight/70 border-b border-blue-100 text-gray-700 py-1.5 px-4 text-xs font-medium">
+<!-- CM024 - Top Bar HTML -->
+<div class="top-bar-bg border-b border-blue-100 text-gray-700 py-1.5 px-4 text-xs font-medium">
 <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center">
 <div class="flex items-center space-x-4 mb-1 sm:mb-0">
-<span><i class="fa-solid fa-phone text-primary mr-1"></i> 9908899131</span>
-<span class="hidden sm:inline"><i class="fa-solid fa-globe text-primary mr-1"></i> www.krishnahospital.com</span>
+<span><i class="fa-solid fa-phone text-primary mr-1"></i> <a href="#" class="dyn-phone dyn-phone-txt hover:text-primary transition-colors"></a></span>
+<span class="hidden sm:inline"><i class="fa-solid fa-globe text-primary mr-1"></i> <a href="#" class="dyn-website-url dyn-website-txt hover:text-primary transition-colors"></a></span>
 </div>
 <div class="flex items-center space-x-3 text-sm">
-<a href="#" class="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors shadow-sm" title="YouTube"><i class="fa-brands fa-youtube text-[10px]"></i></a>
-<a href="#" class="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors shadow-sm" title="Instagram"><i class="fa-brands fa-instagram text-[10px]"></i></a>
-<a href="#" class="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-colors shadow-sm" title="Facebook"><i class="fa-brands fa-facebook-f text-[10px]"></i></a>
-<a href="#" class="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-colors shadow-sm" title="WhatsApp"><i class="fa-brands fa-whatsapp text-[10px]"></i></a>
+<a href="#" class="social-link w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors shadow-sm" title="YouTube"><i class="fa-brands fa-youtube text-[10px]"></i></a>
+<a href="#" class="social-link w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors shadow-sm" title="Instagram"><i class="fa-brands fa-instagram text-[10px]"></i></a>
+<a href="#" class="social-link w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-colors shadow-sm" title="Facebook"><i class="fa-brands fa-facebook-f text-[10px]"></i></a>
+<a href="#" class="social-link w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-colors shadow-sm" title="WhatsApp"><i class="fa-brands fa-whatsapp text-[10px]"></i></a>
 </div>
 </div>
 </div>
 
-<!-- CM011 - Main Header -->
-<header class="w-full z-50 bg-[#f0f9ff] shadow-sm border-b border-blue-50 transition-all duration-300" id="header">
+<!-- CM025 - Header HTML -->
+<header class="w-full z-50 header-bg shadow-sm border-b border-blue-50 transition-all duration-300" id="header">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-16 md:h-20">
 <div class="flex items-center space-x-2 sm:space-x-3">
@@ -112,7 +132,7 @@ body { -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
 <a href="#home" class="text-lg text-gray-600 hover:text-primary transition-colors" title="Home"><i class="fa-solid fa-house"></i></a>
 <a href="#doctors" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Doctors</a>
 <a href="#services" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Services</a>
-<a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Document</a>
+<a href="#" class="dyn-doc text-sm font-semibold text-gray-700 hover:text-primary transition-colors">Document</a>
 <a href="#book-op" class="bg-primary text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary transition-colors shadow-sm flex items-center">
 <i class="fa-solid fa-calendar-check mr-2"></i> Book OP
 </a>
@@ -129,18 +149,19 @@ Book OP
 </div>
 </header>
 
-<!-- CM012 - Mobile Menu -->
-<div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full z-50">
+<!-- CM026 - Mobile Menu HTML -->
+<div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 mobile-menu-shadow absolute w-full z-50">
 <div class="px-4 pt-2 pb-4 space-y-1">
 <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md"><i class="fa-solid fa-house mr-2"></i> Home</a>
 <a href="#doctors" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Doctors</a>
 <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Services</a>
-<a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Document</a>
+<a href="#" class="dyn-doc block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-primaryLight rounded-md">Document</a>
 </div>
 </div>
 
-<!-- CM013 - Hero Section -->
-<section id="home" class="relative bg-softCream overflow-hidden py-10 lg:py-14">
+
+<!-- CM027 - Hero Section HTML -->
+<section id="home" class="relative hero-bg overflow-hidden py-10 lg:py-14">
 <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
 <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primaryLight opacity-50 blur-3xl"></div>
 <div class="absolute bottom-0 -left-24 w-72 h-72 rounded-full bg-secondaryLight opacity-50 blur-3xl"></div>
@@ -159,12 +180,12 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 <a href="#book-op" class="inline-flex justify-center items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary transition-colors">
 <i class="fa-solid fa-calendar-check mr-2"></i> Book / Contact Hospital
 </a>
-<a href="tel:9908899131" class="inline-flex justify-center items-center px-5 py-2.5 border border-primary text-sm font-medium rounded-md text-primary bg-white hover:bg-primaryLight transition-colors">
-<i class="fa-solid fa-phone mr-2"></i> Call 9908899131
+<a href="#" class="dyn-phone inline-flex justify-center items-center px-5 py-2.5 border border-primary text-sm font-medium rounded-md text-primary bg-white hover:bg-primaryLight transition-colors">
+<i class="fa-solid fa-phone mr-2"></i> Call <span class="dyn-phone-txt ml-1"></span>
 </a>
 </div>
 <div class="mt-6 flex items-center justify-center lg:justify-start space-x-5 text-xs font-medium text-gray-500">
-<span class="flex items-center"><i class="fa-solid fa-check-circle text-secondary mr-1.5"></i> 20+ Beds</span>
+<span class="flex items-center"><i class="fa-solid fa-check-circle text-secondary mr-1.5"></i> 5 Beds (Day Care)</span>
 <span class="flex items-center"><i class="fa-solid fa-check-circle text-secondary mr-1.5"></i> Children's Care</span>
 <span class="flex items-center"><i class="fa-solid fa-check-circle text-secondary mr-1.5"></i> Dental Care</span>
 </div>
@@ -187,15 +208,15 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 </div>
 </section>
 
-<!-- CM014 - Quick Info Bar -->
+<!-- CM028 - Quick Info HTML -->
 <div class="bg-white border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
 <div class="flex items-center space-x-3 justify-center md:justify-start">
 <i class="fa-solid fa-bed-pulse text-xl text-primary opacity-80"></i>
 <div>
-<h3 class="font-bold text-gray-800 text-xs">20+ Beds</h3>
-<p class="text-[10px] text-gray-500 hidden sm:block">Comfortable inpatient care</p>
+<h3 class="font-bold text-gray-800 text-xs">5 Beds</h3>
+<p class="text-[10px] text-gray-500 hidden sm:block">Day care observation</p>
 </div>
 </div>
 <div class="flex items-center space-x-3 justify-center md:justify-start border-l-0 md:border-l border-gray-100 pl-0 md:pl-4">
@@ -223,8 +244,9 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 </div>
 </div>
 
-<!-- CM015 - Document Section -->
-<section id="document" class="section-padding bg-softBg">
+
+<!-- CM029 - Document Section HTML -->
+<section id="document" class="section-padding doc-bg">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row justify-between items-end mb-6">
 <div>
@@ -232,42 +254,42 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 <h2 class="text-2xl font-bold text-gray-900">Important Documents</h2>
 <p class="text-xs text-gray-600 mt-1 max-w-xl">Find important health guidelines, patient forms, and hospital information documents here.</p>
 </div>
-<a href="#" class="hidden md:inline-flex text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors mt-3">View All Documents &rarr;</a>
+<a href="#" class="dyn-doc hidden md:inline-flex text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors mt-3">View All Documents &rarr;</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+<a href="#" class="dyn-doc block bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
 <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 <i class="fa-solid fa-file-pdf text-xl"></i>
 </div>
 <h3 class="font-bold text-gray-900 text-xs mb-1">Patient Form</h3>
 <p class="text-[9px] text-gray-500">Download registration form</p>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+</a>
+<a href="#" class="dyn-doc block bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
 <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 <i class="fa-solid fa-file-medical text-xl"></i>
 </div>
 <h3 class="font-bold text-gray-900 text-xs mb-1">Health Guidelines</h3>
 <p class="text-[9px] text-gray-500">Seasonal care tips</p>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+</a>
+<a href="#" class="dyn-doc block bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
 <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 <i class="fa-solid fa-file-prescription text-xl"></i>
 </div>
 <h3 class="font-bold text-gray-900 text-xs mb-1">Dental Care</h3>
 <p class="text-[9px] text-gray-500">Oral hygiene instructions</p>
-</div>
-<div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
+</a>
+<a href="#" class="dyn-doc block bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 card-hover group p-4 flex flex-col items-center text-center cursor-pointer">
 <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 <i class="fa-solid fa-folder-open text-xl"></i>
 </div>
 <h3 class="font-bold text-gray-900 text-xs mb-1">Other Records</h3>
 <p class="text-[9px] text-gray-500">Hospital policies & info</p>
-</div>
+</a>
 </div>
 </div>
 </section>
 
-<!-- CM016 - About Section -->
+<!-- CM030 - About Section HTML -->
 <section id="about" class="section-padding bg-white border-t border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -288,7 +310,7 @@ Providing safe, gentle, and expert pediatric and dental care for your family. A 
 Located in the heart of Allagadda, Krishna Children's and Dental Hospital is a trusted healthcare center dedicated to the well-being of families. We focus primarily on comprehensive children's healthcare and professional dental care in a warm, welcoming environment.
 </p>
 <p>
-Operating across a well-organized three-floor facility, we provide daily checkups, pediatric consultations, oral health care, and medicine support. With over 20 beds available, we ensure comfortable observation and inpatient care when your little ones need it most.
+Operating across a well-organized three-floor facility, we provide daily checkups, pediatric consultations, oral health care, and medicine support. With 5 beds available, we ensure comfortable day care observation when your little ones need it most.
 </p>
 <p class="font-medium text-gray-800 italic border-l-3 border-primaryLight pl-3 py-1">
 "A caring healthcare place for children and families."
@@ -299,7 +321,8 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 </section>
 
-<!-- CM017 - Doctors Section -->
+
+<!-- CM031 - Doctors Section HTML -->
 <section id="doctors" class="section-padding bg-softCream border-t border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-2xl mx-auto mb-10">
@@ -308,8 +331,8 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 <div class="bg-white border border-gray-100 rounded-xl overflow-hidden card-hover flex flex-col sm:flex-row shadow-sm">
-<div class="w-full sm:w-1/2 bg-primaryLight relative">
-<img src="https://placehold.co/400x500/2078b6/ffffff?text=Dr.+Krishnamohan" alt="Dr. K. Krishnamohan Reddy" class="w-full h-56 sm:h-full object-cover">
+<div class="w-full sm:w-1/2 bg-white flex items-center justify-center p-6 border-b sm:border-b-0 sm:border-r border-gray-100 h-48 sm:h-auto doc-placeholder">
+<img src="https://sri-veda-org.github.io/KH/KH-LOGO-MAIN.png" alt="Hospital Logo Placeholder" class="w-full max-h-32 object-contain opacity-80">
 </div>
 <div class="w-full sm:w-1/2 p-5 sm:p-6 flex flex-col justify-center">
 <div class="mb-1 uppercase text-[10px] font-bold text-primary tracking-wide">Pediatrician</div>
@@ -320,8 +343,8 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 </div>
 <div class="bg-white border border-gray-100 rounded-xl overflow-hidden card-hover flex flex-col sm:flex-row shadow-sm">
-<div class="w-full sm:w-1/2 bg-secondaryLight relative">
-<img src="https://placehold.co/400x500/2078b6/ffffff?text=Dr.+Laxmipriyanka" alt="Dr. M. Laxmipriyanka" class="w-full h-56 sm:h-full object-cover">
+<div class="w-full sm:w-1/2 bg-white flex items-center justify-center p-6 border-b sm:border-b-0 sm:border-r border-gray-100 h-48 sm:h-auto doc-placeholder">
+<img src="https://sri-veda-org.github.io/KH/KH-LOGO-MAIN.png" alt="Hospital Logo Placeholder" class="w-full max-h-32 object-contain opacity-80">
 </div>
 <div class="w-full sm:w-1/2 p-5 sm:p-6 flex flex-col justify-center">
 <div class="mb-1 uppercase text-[10px] font-bold text-secondary tracking-wide">Dental Surgeon</div>
@@ -335,7 +358,7 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 </section>
 
-<!-- CM018 - Book OP Section -->
+<!-- CM032 - Book OP HTML -->
 <section id="book-op" class="py-10 bg-primaryLight/30 border-y border-blue-100">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="bg-white rounded-xl shadow-md border border-blue-50 overflow-hidden">
@@ -351,7 +374,7 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 <div>
 <label for="doctor" class="block text-xs font-bold text-gray-700 mb-1">Select Doctor <span class="text-red-500">*</span></label>
-<select id="doctor" name="doctor" class="hd-input w-full px-3 py-2 text-sm rounded-md" required>
+<select id="doctor" name="doctor" class="op-input w-full px-3 py-2 text-sm rounded-md" required>
 <option value="" disabled selected>-- Select --</option>
 <option value="krishnamohan">Dr. K. Krishnamohan Reddy</option>
 <option value="laxmipriyanka">Dr. M. Laxmipriyanka</option>
@@ -359,17 +382,17 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 <div>
 <label for="patientName" class="block text-xs font-bold text-gray-700 mb-1">Patient Full Name <span class="text-red-500">*</span></label>
-<input type="text" id="patientName" name="patientName" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Enter full name" required>
+<input type="text" id="patientName" name="patientName" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="Enter full name" required>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
 <div>
 <label for="patientAge" class="block text-xs font-bold text-gray-700 mb-1">Age <span class="text-red-500">*</span></label>
-<input type="number" id="patientAge" name="patientAge" min="0" max="120" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Yrs" required>
+<input type="number" id="patientAge" name="patientAge" min="0" max="120" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="Yrs" required>
 </div>
 <div>
 <label for="patientGender" class="block text-xs font-bold text-gray-700 mb-1">Gender <span class="text-red-500">*</span></label>
-<select id="patientGender" name="patientGender" class="hd-input w-full px-3 py-2 text-sm rounded-md" required>
+<select id="patientGender" name="patientGender" class="op-input w-full px-3 py-2 text-sm rounded-md" required>
 <option value="" disabled selected>Select</option>
 <option value="Male">Male</option>
 <option value="Female">Female</option>
@@ -377,11 +400,11 @@ Operating across a well-organized three-floor facility, we provide daily checkup
 </div>
 <div class="col-span-2 md:col-span-1">
 <label for="patientPhone" class="block text-xs font-bold text-gray-700 mb-1">Phone <span class="text-red-500">*</span></label>
-<input type="tel" id="patientPhone" name="patientPhone" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="10-digit number" pattern="[0-9]{10}" required>
+<input type="tel" id="patientPhone" name="patientPhone" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="10-digit number" pattern="[0-9]{10}" required>
 </div>
 <div class="col-span-2 md:col-span-1">
 <label for="patientVillage" class="block text-xs font-bold text-gray-700 mb-1">Village/Town <span class="text-red-500">*</span></label>
-<input type="text" id="patientVillage" name="patientVillage" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Location" required>
+<input type="text" id="patientVillage" name="patientVillage" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="Location" required>
 </div>
 </div>
 <div class="flex justify-end">
@@ -395,7 +418,8 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- CM019 - Services Section -->
+
+<!-- CM033 - Services HTML -->
 <section id="services" class="bg-softBg section-padding border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="mb-12">
@@ -461,8 +485,8 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- CM020 - Why Choose Us Section -->
-<section class="section-padding bg-softCream border-b border-gray-100">
+<!-- CM034 - Why Choose Us HTML -->
+<section class="section-padding choose-bg border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 <div>
@@ -483,7 +507,7 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </li>
 <li class="flex items-center">
 <i class="fa-solid fa-check-circle text-secondary mr-3"></i>
-<span class="text-gray-700 text-sm font-medium">20+ beds & friendly environment</span>
+<span class="text-gray-700 text-sm font-medium">5 beds for day care & friendly environment</span>
 </li>
 </ul>
 </div>
@@ -494,7 +518,7 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- CM021 - Gallery Section -->
+<!-- CM035 - Gallery HTML -->
 <section id="gallery" class="section-padding bg-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="mb-6">
@@ -518,13 +542,14 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 </div>
 </section>
 
-<!-- CM022 - Lightbox Element -->
+<!-- CM036 - Lightbox HTML -->
 <div id="lightbox" class="fixed inset-0 z-[60] bg-black bg-opacity-90 items-center justify-center p-4">
 <button onclick="closeLightbox()" class="absolute top-4 right-6 text-white text-4xl hover:text-gray-300">&times;</button>
 <img id="lightbox-img" src="" alt="Full size" class="max-w-full max-h-[90vh] object-contain rounded">
 </div>
 
-<!-- CM023 - Timings and Location -->
+
+<!-- CM037 - Timings & Location HTML -->
 <section class="section-padding bg-softBg border-t border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -548,9 +573,9 @@ Book Now <i class="fa-solid fa-arrow-right ml-2"></i>
 <td class="py-3 font-bold text-gray-800">Dental Consultation</td>
 <td class="py-3 text-gray-600 text-right">9:00 AM - 2:00 PM<br>5:00 PM - 8:30 PM</td>
 </tr>
-<tr>
-<td class="py-3 font-bold text-red-600">Sundays</td>
-<td class="py-3 text-red-500 font-medium text-right">9:00 AM - 2:00 PM</td>
+<tr class="border-b border-gray-100">
+<td class="py-3 font-bold text-gray-800">Sundays</td>
+<td class="py-3 text-gray-600 text-right">9:00 AM - 2:00 PM<br>5:00 PM - 8:30 PM</td>
 </tr>
 </tbody>
 </table>
@@ -576,24 +601,24 @@ Opp. RTC Bus Depot, Kadapa Road, Allagadda, Nandyala District, AP - 518543.
 </div>
 </section>
 
-<!-- CM024 - Contact Section -->
+<!-- CM038 - Contact HTML -->
 <section id="contact" class="py-10 bg-white border-t border-gray-100">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
 <h2 class="text-2xl font-bold text-gray-900 mb-2">We're Here to Help</h2>
-<p class="text-sm text-gray-600">Reach out for inquiries or assistance. Call directly at <a href="tel:9908899131" class="font-bold text-primary">9908899131</a></p>
+<p class="text-sm text-gray-600">Reach out for inquiries or assistance. Call directly at <a href="#" class="dyn-phone font-bold text-primary dyn-phone-txt"></a></p>
 </div>
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 <form id="contact-form" action="#" method="POST" class="bg-softBg p-5 rounded-xl border border-gray-100 shadow-sm">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 <div>
-<input type="text" id="name" name="name" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Your Full Name" required>
+<input type="text" id="name" name="name" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="Your Full Name" required>
 </div>
 <div>
-<input type="tel" id="phone" name="phone" class="hd-input w-full px-3 py-2 text-sm rounded-md" placeholder="Your Phone Number" required>
+<input type="tel" id="phone" name="phone" class="op-input w-full px-3 py-2 text-sm rounded-md" placeholder="Your Phone Number" required>
 </div>
 </div>
 <div class="mb-4">
-<textarea id="message" name="message" rows="2" class="hd-input w-full px-3 py-2 text-sm rounded-md resize-none" placeholder="How can we help you?" required></textarea>
+<textarea id="message" name="message" rows="2" class="op-input w-full px-3 py-2 text-sm rounded-md resize-none" placeholder="How can we help you?" required></textarea>
 </div>
 <div class="text-right">
 <button type="submit" class="bg-gray-900 text-white px-6 py-2 rounded-md text-sm font-bold hover:bg-gray-800 transition-colors shadow-sm">
@@ -604,8 +629,8 @@ Send Message
 </div>
 </section>
 
-<!-- CM025 - Footer Section -->
-<footer class="bg-softCream text-gray-800 pt-10 pb-24 md:pb-6 border-t border-blue-100">
+<!-- CM039 - Footer HTML -->
+<footer class="footer-bg text-gray-800 pt-10 pb-24 md:pb-6 border-t border-blue-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 <div class="md:col-span-1">
@@ -622,20 +647,20 @@ Send Message
 <li><a href="#home" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Home</a></li>
 <li><a href="#doctors" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Doctors</a></li>
 <li><a href="#services" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Services</a></li>
-<li><a href="https://kh-alg.github.io/WEB-V1.0/healthrecord/" class="hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Document</a></li>
+<li><a href="#" class="dyn-doc hover:text-primary transition-colors"><i class="fa-solid fa-angle-right text-[10px] mr-1 text-primary"></i> Document</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold text-sm mb-3 text-gray-900">Contact Info</h4>
 <ul class="space-y-2 text-xs text-gray-600 mb-4">
 <li class="flex items-start"><i class="fa-solid fa-location-dot mt-0.5 mr-2 text-primary w-3 text-center"></i> Opp. RTC Bus Depot, Allagadda</li>
-<li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-primary w-3 text-center"></i> 9908899131</li>
+<li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-primary w-3 text-center"></i> <span class="dyn-phone-txt"></span></li>
 </ul>
 <div class="flex space-x-3 text-sm">
-<a href="#" class="w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors shadow-sm" title="YouTube"><i class="fa-brands fa-youtube text-xs"></i></a>
-<a href="#" class="w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors shadow-sm" title="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
-<a href="#" class="w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-colors shadow-sm" title="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-<a href="#" class="w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-colors shadow-sm" title="WhatsApp"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+<a href="#" class="social-link w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors shadow-sm" title="YouTube"><i class="fa-brands fa-youtube text-xs"></i></a>
+<a href="#" class="social-link w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors shadow-sm" title="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+<a href="#" class="social-link w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-colors shadow-sm" title="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+<a href="#" class="social-link w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-colors shadow-sm" title="WhatsApp"><i class="fa-brands fa-whatsapp text-xs"></i></a>
 </div>
 </div>
 </div>
@@ -645,9 +670,9 @@ Send Message
 </div>
 </footer>
 
-<!-- CM026 - Mobile Bottom Bar -->
-<div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 flex">
-<a href="tel:9908899131" class="flex-1 py-3 flex flex-col items-center justify-center text-primary hover:bg-gray-50 transition-colors">
+<!-- CM040 - Mobile Bottom Bar HTML -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 bottom-bar-shadow z-50 flex">
+<a href="#" class="dyn-phone flex-1 py-3 flex flex-col items-center justify-center text-primary hover:bg-gray-50 transition-colors">
 <i class="fa-solid fa-phone mb-1 text-lg"></i>
 <span class="text-[10px] font-bold uppercase">Call Now</span>
 </a>
@@ -664,26 +689,29 @@ Send Message
 </div>
 
 <script>
-/* CM027 - Mobile Menu Logic */
-const btn = document.getElementById('mobile-menu-btn'); const menu = document.getElementById('mobile-menu'); const icon = btn.querySelector('i'); btn.addEventListener('click', () => { menu.classList.toggle('hidden'); if (menu.classList.contains('hidden')) { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); } else { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); } }); const mobileLinks = menu.querySelectorAll('a'); mobileLinks.forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }); });
 
-/* CM028 - Lightbox Logic */
-const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img'); function openLightbox(imgSrc) { lightboxImg.src = imgSrc; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; } function closeLightbox() { lightbox.classList.remove('active'); document.body.style.overflow = 'auto'; } lightbox.addEventListener('click', (e) => { if (e.target === lightbox) { closeLightbox(); } }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) { closeLightbox(); } });
+/* CM041 - Configuration & Links Variables */
+const linkPhone = "tel:9908899131";
+const linkWebsiteText = "www.krishnahospital.online";
+const linkWebsiteUrl = "https://www.krishnahospital.online";
+/* >>> SPECIAL COMMENT FOR DOCUMENT LINK: UPDATE THE URL BELOW WHEN NEEDED <<< */
+const linkDocument = "https://kh-alg.github.io/WEB-V1.0/healthrecord/";
 
-/* CM029 - PWA Logic */
-let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
+/* CM042 - Links Assignment Logic */
+window.addEventListener('DOMContentLoaded', () => { document.querySelectorAll('.dyn-phone').forEach(el => el.href = linkPhone); document.querySelectorAll('.dyn-phone-txt').forEach(el => el.textContent = linkPhone.replace('tel:', '')); document.querySelectorAll('.dyn-website-url').forEach(el => el.href = linkWebsiteUrl); document.querySelectorAll('.dyn-website-txt').forEach(el => el.textContent = linkWebsiteText); document.querySelectorAll('.dyn-doc').forEach(el => el.href = linkDocument); });
 
-/* CM030 - Toast Notification Logic */
-function showToast(msg) { const t = document.createElement('div'); t.className = 'bg-gray-800 text-white px-4 py-3 rounded shadow-lg text-sm transition-opacity duration-300 pointer-events-auto border-l-4 border-primary'; t.textContent = msg; document.getElementById('toast-container').appendChild(t); setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 4000); }
+/* CM043 - Mobile Menu Logic */
+const btn = document.getElementById('mobile-menu-btn'); const menu = document.getElementById('mobile-menu'); const icon = btn.querySelector('i'); btn.addEventListener('click', () => { menu.classList.toggle('hidden'); if (menu.classList.contains('hidden')) { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); } else { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); } }); menu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }); });
 
-/* CM031 - OP Registration Form Logic */
-document.getElementById('op-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not available today so it will be working soon.'); });
+/* CM044 - Lightbox Logic */
+const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img'); const openLightbox = (imgSrc) => { lightboxImg.src = imgSrc; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; }; const closeLightbox = () => { lightbox.classList.remove('active'); document.body.style.overflow = 'auto'; }; lightbox.addEventListener('click', (e) => { if (e.target === lightbox) { closeLightbox(); } }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) { closeLightbox(); } });
 
-/* CM032 - Contact Form Logic */
-document.getElementById('contact-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not working.'); });
+/* CM045 - Toast Notification Logic */
+const showToast = (msg) => { const t = document.createElement('div'); t.className = 'bg-gray-800 text-white px-4 py-3 rounded shadow-lg text-sm transition-opacity duration-300 pointer-events-auto border-l-4 border-primary'; t.textContent = msg; document.getElementById('toast-container').appendChild(t); setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 4000); };
 
-/* CM033 - Contact Form Input Logic */
-document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(input => { input.addEventListener('focus', () => { showToast('This service is not working.'); }); });
+/* CM046 - Form & Social Media Logic */
+document.getElementById('op-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not available today so it will be working soon.'); }); document.getElementById('contact-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('This service is not working.'); }); document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(input => { input.addEventListener('focus', () => { showToast('This service is not working.'); }); }); document.querySelectorAll('.social-link').forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); showToast('Link will be open soon'); }); });
+
 </script>
 </body>
 </html>
